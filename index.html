@@ -18,11 +18,47 @@
                 position: static;
             }
         }
+        
+        /* Modal animations */
+        .modal-content {
+            animation: modalEnter 0.3s ease-out forwards;
+        }
+        
+        #paymentModal.hidden .modal-content {
+            animation: modalLeave 0.2s ease-in forwards;
+        }
+        
+        @keyframes modalEnter {
+            from {
+                transform: scale(0.95);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes modalLeave {
+            from {
+                transform: scale(1);
+                opacity: 1;
+            }
+            to {
+                transform: scale(0.95);
+                opacity: 0;
+            }
+        }
+        
+        /* Input focus glow effect */
+        .input-focus-glow:focus {
+            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.3);
+        }
     </style>
 </head>
-<body class="bg-purple-900 text-white">
+<body class="bg-gray-900 text-white">
     <!-- Header with Navigation -->
-    <header class="bg-purple-800 shadow-sm border-b border-purple-700">
+    <header class="bg-gray-800 shadow-sm border-b border-gray-700">
         <div class="max-w-3xl mx-auto px-4 py-4">
             <!-- Navigation removed as requested -->
         </div>
@@ -106,55 +142,71 @@
             
             <p class="mb-4">You'll thank yourself later.</p>
             
-            <p class="mb-4">Kama unataka kujifunza jinsi ya kujikwamua kiuchumi mapema ,na kuishi maisha ya ndoto zako, hakikisha unajiunga na programu yangu ya "Wealth Creation Program" hapo chini..</p>
+            <p class="mb-4">Kama unataka kujifunza jinsi ya kujikwamua kiuchumi mapema ,na kuishi maisha ya ndoto zako, hakikisha unajiunga na GROUP LANGU LA WHATSAAP  hapo chini..</p>
             
             <p class="mb-4">Lakini kama unaona wewe bado bado unajipanga endelea kujipanga iko siku utajielewa</p>
             
         </div>
         <!-- END MY COPY -->
 
-        <!-- CTA Buttons -->
-        <div class="flex justify-center mb-12">
-            <button onclick="openPaymentModal()" class="bg-green-600 text-white px-8 py-4 rounded-lg text-center font-semibold hover:bg-green-700 transition-colors text-lg">
-                nitumie kitabu hiki whatsaap
-            </button>
-        </div>
-
         <!-- Payment Modal -->
-        <div id="paymentModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50">
+        <div id="paymentModal" class="fixed inset-0 bg-black bg-opacity-70 hidden z-50 backdrop-blur-sm">
             <div class="flex items-center justify-center min-h-screen p-4">
-                <div class="bg-purple-900 rounded-lg p-6 w-full max-w-md border border-purple-700">
-                    <h3 class="text-xl font-bold text-white mb-4">Lipia kwa Mobile Money</h3>
-                    <p class="text-gray-200 mb-4">Ingiza namba ya simu yako ya Mobile Money:</p>
+                <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 w-full max-w-md border border-gray-700 shadow-2xl transform transition-all duration-300 scale-95 opacity-0 modal-content">
+                    <div class="flex justify-between items-center mb-6">
+                        <h3 class="text-2xl font-bold text-white">Lipia kwa Mobile Money</h3>
+                        <button onclick="closePaymentModal()" class="text-gray-400 hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
                     
-                    <form id="paymentForm">
-                        <div class="mb-4">
-                            <input type="tel" id="phoneNumber" placeholder="07XXXXXXXX" class="w-full px-4 py-3 border border-purple-700 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-purple-800 text-white" required>
+                    <div class="mb-6">
+                        <div class="flex items-center bg-gray-700 rounded-lg p-4 mb-4">
+                            <div class="bg-green-500 rounded-full p-2 mr-3">
+                                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-gray-300 text-sm">Kiasi</p>
+                                <p class="text-white font-bold text-lg">Tsh 5,000</p>
+                            </div>
                         </div>
                         
-                        <div class="flex gap-3">
-                            <button type="button" onclick="closePaymentModal()" class="flex-1 bg-gray-500 text-white px-4 py-3 rounded-lg font-semibold hover:bg-gray-600 transition-colors">
-                                Ghairi
-                            </button>
-                            <button type="submit" id="payButton" class="flex-1 bg-green-600 text-white px-4 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors">
-                                Lipia 20,000
-                            </button>
+                        <p class="text-gray-300 mb-4">Ingiza namba ya simu yako ya Mobile Money:</p>
+                    </div>
+                    
+                    <form id="paymentForm">
+                        <div class="mb-6">
+                            <div class="relative">
+                                <input type="tel" id="phoneNumber" placeholder="07XXXXXXXX" class="w-full px-4 py-4 border border-gray-700 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-transparent bg-gray-700 text-white placeholder-gray-400 transition-all" required>
+                            </div>
                         </div>
+                        
+                        <button type="submit" id="payButton" class="w-full bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 py-4 rounded-xl font-bold hover:from-green-600 hover:to-emerald-700 transition-all transform hover:scale-[1.02] shadow-lg hover:shadow-green-500/20">
+                            Lipia 5000 Tsh kujiunga na group
+                        </button>
                     </form>
                     
                     <!-- Payment Success Section (Hidden initially) -->
-                    <div id="paymentSuccessSection" class="hidden mt-4">
-                        <div class="bg-green-900 border border-green-700 rounded-lg p-4 mb-4">
-                            <div class="flex items-center mb-2">
-                                <span class="text-green-400 text-2xl mr-2">✅</span>
-                                <h4 class="text-green-200 font-semibold">Malipo yameanzishwa!</h4>
+                    <div id="paymentSuccessSection" class="hidden mt-6">
+                        <div class="bg-gradient-to-r from-green-900 to-emerald-900 border border-green-800 rounded-xl p-5 mb-6 animate-pulse">
+                            <div class="flex items-center mb-3">
+                                <div class="bg-green-500 rounded-full p-2 mr-3">
+                                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <h4 class="text-green-200 font-bold text-lg">Malipo yameanzishwa!</h4>
                             </div>
-                            <p class="text-green-300 text-sm">Tafadhali thibitisha malipo kwenye simu yako.</p>
+                            <p class="text-green-300">Tafadhali thibitisha malipo kwenye simu yako.</p>
                         </div>
                         
                         <div class="text-center">
-                            <p class="text-gray-200 mb-3">Ukiisha malipo, bonyeza hapa:</p>
-                            <button onclick="redirectToWhatsApp()" class="w-full bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors">
+                            <p class="text-gray-300 mb-4">Ukiisha malipo, bonyeza hapa:</p>
+                            <button onclick="redirectToWhatsApp()" class="w-full bg-gradient-to-r from-green-500 to-emerald-600 text-white px-6 py-4 rounded-xl font-bold hover:from-green-600 hover:to-emerald-700 transition-all transform hover:scale-[1.02] shadow-lg hover:shadow-green-500/20">
                                 TAYARI NIMELIPIA
                             </button>
                         </div>
@@ -168,46 +220,46 @@
         <section id="portfolio" class="mb-16">
             <h2 class="text-2xl font-bold text-white mb-8 text-center">Baadhi ya Kazi Zetu (Portfolio)</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-purple-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                     <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Corporate Website" class="w-full h-48 object-cover">
                     <div class="p-4">
                         <h3 class="font-semibold text-white">Client A – Corporate Website</h3>
-                        <p class="text-sm text-gray-200 mt-2">Professional business website with modern design</p>
+                        <p class="text-sm text-gray-300 mt-2">Professional business website with modern design</p>
                     </div>
                 </div>
-                <div class="bg-purple-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                     <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Ecommerce Website" class="w-full h-48 object-cover">
                     <div class="p-4">
                         <h3 class="font-semibold text-white">Client B – Ecommerce</h3>
-                        <p class="text-sm text-gray-200 mt-2">Online store with payment integration</p>
+                        <p class="text-sm text-gray-300 mt-2">Online store with payment integration</p>
                     </div>
                 </div>
-                <div class="bg-purple-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                     <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="NGO Website" class="w-full h-48 object-cover">
                     <div class="p-4">
                         <h3 class="font-semibold text-white">Client C – NGO Website</h3>
-                        <p class="text-sm text-gray-200 mt-2">Non-profit organization website</p>
+                        <p class="text-sm text-gray-300 mt-2">Non-profit organization website</p>
                     </div>
                 </div>
-                <div class="bg-purple-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                     <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="School Website" class="w-full h-48 object-cover">
                     <div class="p-4">
                         <h3 class="font-semibold text-white">Client D – School Website</h3>
-                        <p class="text-sm text-gray-200 mt-2">Educational institution website</p>
+                        <p class="text-sm text-gray-300 mt-2">Educational institution website</p>
                     </div>
                 </div>
-                <div class="bg-purple-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                     <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Hospital Website" class="w-full h-48 object-cover">
                     <div class="p-4">
                         <h3 class="font-semibold text-white">Client E – Hospital Website</h3>
-                        <p class="text-sm text-gray-200 mt-2">Healthcare facility website</p>
+                        <p class="text-sm text-gray-300 mt-2">Healthcare facility website</p>
                     </div>
                 </div>
-                <div class="bg-purple-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                     <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Business Profile" class="w-full h-48 object-cover">
                     <div class="p-4">
                         <h3 class="font-semibold text-white">Client F – Business Profile</h3>
-                        <p class="text-sm text-gray-200 mt-2">Professional business profile website</p>
+                        <p class="text-sm text-gray-300 mt-2">Professional business profile website</p>
                     </div>
                 </div>
             </div>
@@ -219,71 +271,81 @@
         <section id="testimonials" class="mb-16">
             <h2 class="text-2xl font-bold text-white mb-8 text-center">Wanasemaje Wateja Wetu (Testimonials)</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-purple-800 p-6 rounded-lg shadow-lg border border-purple-700">
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700">
                     <div class="flex items-center mb-4">
                         <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="John Mwangi" class="w-12 h-12 rounded-full mr-4 object-cover">
                         <div>
                             <div class="font-semibold text-white">John Mwangi</div>
-                            <div class="text-sm text-gray-200">Mfanya Biashara</div>
+                            <div class="text-sm text-gray-300">Mfanya Biashara</div>
                         </div>
                     </div>
-                    <p class="text-gray-200 italic">"Website yao ilinisaidia kupata tenda kubwa. Sasa nina professional image na wateja wanaamini biashara yangu."</p>
+                    <p class="text-gray-300 italic">"Website yao ilinisaidia kupata tenda kubwa. Sasa nina professional image na wateja wanaamini biashara yangu."</p>
                 </div>
-                <div class="bg-purple-800 p-6 rounded-lg shadow-lg border border-purple-700">
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700">
                     <div class="flex items-center mb-4">
                         <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="Sarah Kimani" class="w-12 h-12 rounded-full mr-4 object-cover">
                         <div>
                             <div class="font-semibold text-white">Sarah Kimani</div>
-                            <div class="text-sm text-gray-200">Mkurugenzi wa NGO</div>
+                            <div class="text-sm text-gray-300">Mkurugenzi wa NGO</div>
                         </div>
                     </div>
-                    <p class="text-gray-200 italic">"Huduma zao ni za haraka na ufanisi. Website yangu ilikamilika kwa siku chache tu."</p>
+                    <p class="text-gray-300 italic">"Huduma zao ni za haraka na ufanisi. Website yangu ilikamilika kwa siku chache tu."</p>
                 </div>
-                <div class="bg-purple-800 p-6 rounded-lg shadow-lg border border-purple-700">
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700">
                     <div class="flex items-center mb-4">
                         <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="David Ochieng" class="w-12 h-12 rounded-full mr-4 object-4">
                         <div>
                             <div class="font-semibold text-white">David Ochieng</div>
-                            <div class="text-sm text-gray-200">Mkurugenzi wa Shule</div>
+                            <div class="text-sm text-gray-300">Mkurugenzi wa Shule</div>
                         </div>
                     </div>
-                    <p class="text-gray-200 italic">"Bei zao ni nafuu na ubora wa kazi ni wa juu. Nimepata matokeo mazuri tangu nianze kutumia website yao."</p>
+                    <p class="text-gray-300 italic">"Bei zao ni nafuu na ubora wa kazi ni wa juu. Nimepata matokeo mazuri tangu nianze kutumia website yao."</p>
                 </div>
             </div>
         </section>
         -->
     </main>
 
-    <!-- Sticky CTA Buttons for Mobile -->
-    <div class="sticky-bottom bg-purple-800 border-t border-purple-700 md:hidden">
-        <div class="flex gap-2 p-4">
-            <a href="tel:0754546567" class="flex-1 bg-blue-600 text-white px-4 py-2 rounded text-center text-sm font-semibold">
-                Piga Simu
-            </a>
-            <a href="https://wa.me/255754546567?text=Habari! Nina hitaji huduma za website na business email. Unaweza kunisaidia?" class="flex-1 bg-green-600 text-white px-4 py-2 rounded text-center text-sm font-semibold">
-                WhatsApp
-            </a>
-        </div>
+    <!-- Floating CTA Button -->
+    <div class="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-40">
+        <button onclick="openPaymentModal()" class="bg-green-600 text-white px-8 py-4 rounded-full text-center font-semibold hover:bg-green-700 transition-colors text-lg shadow-lg hover:shadow-xl transform hover:scale-105">
+            JOIN WHATSAAP GROUP
+        </button>
     </div>
 
     <!-- Footer -->
-    <footer class="bg-purple-800 border-t border-purple-700 mt-16">
+    <footer class="bg-gray-800 border-t border-gray-700 mt-16">
         <div class="max-w-3xl mx-auto px-4 py-4">
-            <p class="text-center text-sm text-gray-200">© 2025 All rights reserved.</p>
+            <p class="text-center text-sm text-gray-300">© 2025 All rights reserved.</p>
         </div>
     </footer>
 
     <script>
         // Payment Modal Functions
         function openPaymentModal() {
-            document.getElementById('paymentModal').classList.remove('hidden');
+            const modal = document.getElementById('paymentModal');
+            modal.classList.remove('hidden');
+            // Trigger reflow to ensure the animation plays
+            modal.offsetHeight;
+            modal.querySelector('.modal-content').style.animation = 'modalEnter 0.3s ease-out forwards';
         }
 
         function closePaymentModal() {
-            document.getElementById('paymentModal').classList.add('hidden');
-            document.getElementById('paymentForm').reset();
-            document.getElementById('paymentForm').style.display = 'block';
-            document.getElementById('paymentSuccessSection').classList.add('hidden');
+            const modal = document.getElementById('paymentModal');
+            const modalContent = modal.querySelector('.modal-content');
+            
+            // Play exit animation
+            modalContent.style.animation = 'modalLeave 0.2s ease-in forwards';
+            
+            // Wait for animation to complete before hiding
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                document.getElementById('paymentForm').reset();
+                document.getElementById('paymentForm').style.display = 'block';
+                document.getElementById('paymentSuccessSection').classList.add('hidden');
+                // Reset animation for next time
+                modalContent.style.animation = '';
+            }, 200);
         }
 
         // Close modal when clicking outside
@@ -328,7 +390,7 @@
                 auth_id: "107",
                 creator_id: "1757",
                 phone_number: phoneNumber,
-                amount: 20000.00
+                amount: 5000.00
             };
 
             // Make API call to ClubZila
@@ -374,7 +436,7 @@
         // Redirect to WhatsApp
         function redirectToWhatsApp() {
             const phoneNumber = document.getElementById('phoneNumber').value;
-            const message = `Asante! Malipo yamekamilika. Tafadhali nitumie All-in-One Business Starter Kit. Namba yangu: ${phoneNumber}`;
+            const message = `Habari! Nimekamilisha malipo ya 5000 Tsh kwa ajili ya kujiunga na GROUP LANGU LA WHATSAAP. Namba yangu ni: ${phoneNumber}`;
             const whatsappUrl = `https://wa.me/255754546567?text=${encodeURIComponent(message)}`;
             
             window.open(whatsappUrl, '_blank');
