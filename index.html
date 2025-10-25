@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="sw">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Business Services</title>
+    <title>StreamFlix - Premium Video Streaming</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .sticky-bottom {
@@ -54,127 +54,249 @@
         .input-focus-glow:focus {
             box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.3);
         }
+        
+        /* Video card hover effect */
+        .video-card:hover {
+            transform: scale(1.03);
+            transition: transform 0.3s ease;
+        }
+        
+        /* Featured video banner */
+        .featured-banner {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://makojozii-tupu.icu/Pj4sbamJgTcU/img/01.jpg') center/cover no-repeat;
+        }
     </style>
 </head>
 <body class="bg-gray-900 text-white">
     <!-- Header with Navigation -->
     <header class="bg-gray-800 shadow-sm border-b border-gray-700">
-        <div class="max-w-3xl mx-auto px-4 py-4">
-            <!-- Navigation removed as requested -->
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <h1 class="text-2xl font-bold text-green-500">StreamFlix</h1>
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#" class="hover:text-green-400 transition-colors">Home</a>
+                <a href="#" class="hover:text-green-400 transition-colors">Movies</a>
+                <a href="#" class="hover:text-green-400 transition-colors">TV Shows</a>
+                <a href="#" class="hover:text-green-400 transition-colors">My List</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <button class="bg-gray-700 hover:bg-gray-600 px-4 py-2 rounded-lg transition-colors">Sign In</button>
+            </div>
         </div>
     </header>
 
     <!-- Main Content -->
-    <main class="max-w-3xl mx-auto px-4 py-6">
-        <!-- START MY COPY -->
-        <div class="prose prose-lg max-w-none">
-            <h1 class="text-3xl font-bold text-white mb-6">Life Begins at 40....</h1>
-            
-            <div class="mb-6">
-                <img src="https://i.postimg.cc/NGZzk1QQ/Black-Gray-Simple-Vlogger-You-Tube-Banner-1.png" alt="Financial Wisdom" class="w-full rounded-lg shadow-lg">
+    <main class="max-w-7xl mx-auto px-4 py-6">
+        <!-- Featured Banner -->
+        <div class="featured-banner rounded-xl mb-10 p-8">
+            <div class="max-w-lg">
+                <h1 class="text-4xl font-bold mb-4">Angalia Video Zote</h1>
+                <p class="text-lg mb-6">Group la malaya wote TZ<br>Connection zote zipo</p>
+                <button onclick="openPaymentModal()" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold text-lg transition-colors">
+                    Start Watching Now
+                </button>
             </div>
-            
-            <p class="mb-4">Huo ni msemo wanao Waingereza wakimaanisha maisha yako ijapokuwa yanaanza toka milele iliyopita na toka umeumbwa au toka umefika duniani na toka umeanza kukua nk nk lakini bana maisha #halisi yataanza rasmi siku ukitimiza miaka 40. Ndii!!</p>
-            
-            <p class="mb-4">Hapo kama bado nauli tena ya daladala ni ishu, ada, chakula, kodi ya nyumba, nk basi ndo utaanza kuelewa maana ya muda uliokuwa unatumia Facebook kulike picha za ajabu na story zisizokupeleka popote.</p>
-            
-            <p class="mb-4">Nadhani unanielewa sasa hasa wewe ambaye unahisi umri wako bado ni mdogo kwa hiyo bado bado kidogo muda wa kuwa serious na maisha haujafika.</p>
-            
-            <p class="mb-4">Sikia kijana... TODAY is your future kwa taarifa yako.. Ulipokuwa mdogo ulisema nikiwa mkubwa nitakuwa na gari na nyumba nzuri wazazi wangu wataishi hivi na vile. Je unayo? Je imetokea? Maybe yes. But maybe no.</p>
-            
-            <p class="mb-4">Kama haijatokea je bado hujawa mkubwa? Bado mdogo ee? Basi kama ni mkubwa ujue kuna kitu hujafanya.</p>
-            
-            <p class="mb-4">Huenda uko in your 20s or 30s... Unajisemea kwamba nikifika miaka 40 nataka niwe na hiki na kile watoto wangu wasome international school nk. Subiri uone miaka inavyoenda. Usishangae kufika 40 bado umeajiriwa kwa mtu na anakugombeza kwa nini mwanao anaumwa kila siku unachelewa kazini. Kazi nyingi. No bright future. No enjoyable present. Just existing and not living!</p>
-            
-            <p class="mb-4">Hapo ndo unawaza kufungua kibanda cha M-PESA mtaani kwenu. Wenzako wa umri wako hapo unasikia wameanzisha business in Western Europe. Wamenunua kiwanja Mbezi Beach kwa 800M! Anamiliki Apartment Masaki, Nairobi, Jo'burg, Dubai. Na amezipangisha anapata rental income. Tena in dollars. Wewe kazi yako kutafuta tu wapi waliiba au kama ni mdada wapi alihongwa?</p>
-            
-            <p class="mb-4">By that time wenzako wakienda Dubai wanafikia The Atlantis, wakienda UK wanaenda kula The Ritz (Google that). Wakitua Las Vegas wanaenda Caesar's Palace. Wanasomesha watoto zao the finest schools available wewe wa kwako wakati huo wamekosa nafasi hata Makongo tu hapo unaambiwa eti pamejaa wameenda ndani ndani huko wanapanda daladala kama tatu mara mwendokasi mara washuke warudi nyuma kidogo ndo wapuyange kwa miguu kwenda shule. Na kurudi hivyo hivyo. Hiyo shule au safari ya kwenda utumwani?</p>
-            
-            <p class="mb-4">Wenzako in their 40s wanasaidia wasio na uwezo katika jamii wewe ndo kwanza ukipokea simu kutoka kijijini mzazi anahitaji support kidogo una-mute! Wenzako in their 40s wakisikia kuna ujenzi wa nyumba ya ibada wanachangia 10M kimyakimya.. Wewe ukitoa laki moja basi mpaka mtaa wa saba watajua! Halafu unashangaa wenzako wanazidi kuinuliwa. Unaanza kuwaita Freemason. Mwenye nacho ataongezewa au hujui? Na asiye nacho......</p>
-            
-            <p class="mb-4">Wakati wenzako walikuwa wanajenga maisha na kujifunza vitu vya maana wewe ulikuwa unashinda Facebook kuongelea visivyokusaidia.</p>
-            
-            <p class="mb-4">Vijana wa kitanzania yani wanajua kiiiila kitu. Uchaguzi hata uwe RWANDA wao wana cha kushauri. Maandamano yawe Kenya wanajua cha kushauri. Ishu hata iwe Ethiopia wanajua cha kushauri. Ikitoka clip hata Malema anaongea issue za Africa Kusini utasikia MWANAUME HUYU.</p>
-            
-            <p class="mb-4">Muda unaenda hivyo...</p>
-            
-            <p class="mb-4">Wanajua msanii anapaswa aongee nini kwenye interview ya maisha yake mwenyewe. Khaa! Wana maoni anatakiwa adate na nani na aachane na nani. Wanajua mahusiano ya zamani na ya sasa na yajayo ya msanii.</p>
-            
-            <p class="mb-4">Muda unaenda hivyo...</p>
-            
-            <p class="mb-4">Wanajua LIGI YA TANZANIA. LIGI YA ULAYA. Wanajua nani anapaswa kuwa kocha wa timu iko hata Ufaransa huko.</p>
-            
-            <p class="mb-4">Muda unaenda....</p>
-            
-            <p class="mb-4">Sasa my friend utaweza wewe kufanya vitu ambavyo wazazi wako wote wawili walishindwa? Utaweza kutengeneza GENERTIONAL WEALTH wewe?</p>
-            
-            <p class="mb-4">Umeshajadili Zitto Kabwe ukaja Lissu, ukadakia Makonda mara una Msigwa...</p>
-            
-            <p class="mb-4">Hivi vitu kila napoona vijana wanatumia muda kujadili watu.ambao wameshaji estdblish na wanajua wanachofanya huwa najisikia huruma sana... mtu anamtukana mwanasiasa ambaye hajui hata robo ya kinachojiri kwenye ulimwengu hadaa wa siasa!</p>
-            
-            <p class="mb-4">Hebu fikiria kidogo. Yoote hayo yamekufikisha wapi? Mara Nape Nauye. Haji Manara. Mara unajadili Mwijaku eti. Khaaa.. Are you serious? Unafatilia habari zake mpaka kichwa kinajaa habari zinazokuvuruga tu. Haya mara Harmonize na Harmorapa je? Vitu hivi vinawezaje kuwa sehemu ya muda wa mtu ambaye yuko serious na maisha yake?</p>
-            
-            <p class="mb-4">Mbowe uliyemjadili amekufikisha wapi. Makonda umefika nae wapi? Mara ujadili sijui Zari ana umri gani. Can you imagine? Yaani hicho ndo kichwa cha kijana wa kitanzania. Ukimwambia vitu vya maana anasema hana muda. Lol!! Mwingine anatukana!</p>
-            
-            <p class="mb-4">Wenzako mkifika miaka 40 watu wa rika lako wana exposure ya uhakika. Wewe at 40 bado umeajiriwa na mchana unakula kwa mama lishe chakula hata virutubisho hakina. Wenzako at 40 washaacha ajira siku nyingi washatembea dunia na kujifunza maisha kutoka kila mahali. Walishafika kuanzia Sauzi, Botswana, Mozambique, Kenya, Ethiopia, Ghana, mpaka Egypt, The UK, Australia, Hawaii, Mexico, Croatia, The Netherlands, Switzerland, US, Panama mpaka Puerto Rico, Brazil na jirani zake, Hong Kong, Australia, Japan, China, (Incredible) India, Thailand, Singapore, New Zealand, Comorros, you name it..!!</p>
-            
-            <p class="mb-4">Wewe hata Kampala hujawahi fika. Kila siku Tegeta Posta ndo ruti yako miaka 15 mfululizo eti unatafutia watoto maisha!</p>
-            
-            <p class="mb-4">Unaishi au unaisha? Na watoto wenyewe ndo wale safari ya shule kama safari ya kwenda utumwani!</p>
-            
-            <p class="mb-4">Unasubiri kiinua mgongo? Utaenda kukiinvest wapi na kwa nguvu ipi. Na utaenjoy retirement kweli kama at 60 yrs ndo unafungua duka la vifaa vya ujenzi eti vinalipa. Kwa nini hukufungua ukiwa 30yrs ili uone vinalipa au la. At 60? With due respect. Kisa ulikuwa unafatilia ratiba zote za mechi za mpira na matamasha na mikutano yote ya kisiasa ukasahau muda unaenda.</p>
-            
-            <p class="mb-4">Listen...</p>
-            
-            <p class="mb-4">Hao unaowafatilia wako ndani ya kazi zao kwa hiyo muda wao unatumikia shughuli zao wakati wewe utatumia muda wako na pesa yako kwenda kuangalia nk. Jenga nidhamu mpya ya kulinda muda wako sasa.</p>
-            
-            <p class="mb-4">Suffer the pain of discipline now. Or else you will suffer the pain of REGRET. Halafu ukianza kuregret ndo pressure zinakuja, stress, nk mwisho unawacha hata hao watoto (wale wa kwenye safari ya utumwa) in a far worse situation than your own lifetime. Kisa? Ulikuwa unatumia muda wote kuangalia vitu vya kuchekesha chekesha unaita MEMEs. Kuna Account Instagram kabisa eti za MEMES. Mwenzio anafanya biashara kwa kukulisha ujinga...</p>
-            
-            <p class="mb-4">Seriously Mungu atakupa mafanikio kwa kichwa hicho kilichojaa vitu cheap cheap hivyo?</p>
-            
-            <p class="mb-4">Hivi vitu vinaiba muda wako sana ndugu zangu. Mtu akikutumia MEME ya vitu vya kijinga ujue kakuona wewe mjinga tu na huna direction kwenye maisha. Kuna watu anawaheshimu hawezi kudiriki kuwatumia huo upuuzi.</p>
-            
-            <p class="mb-4">Hapa sijaongelea PORN*GRAPHY. Kichwa kilichojaa picha za ngono simu imejaa upuuzi kichwa hicho hicho kije kimiliki uchumi usaidie taifa na Jamii wewe huyo? Kama umeshindwa KUDELETE tu picha za ngono utunze usahihi wa fikra zako utaweza kutunza MILIONI HATA 100 wewe?</p>
-            
-            <p class="mb-4">Utashangaa umri unaenda bila kupiga hatua. Umri wako ni kila sekunde na kila dakika na kila saa. Ndo umri huo. Umri siyo mwaka kwa mwaka. Ni sekunde na dakika. Ndo maana matajiri wanalinda muda wao kwa wivu mkali. Coz TIME IS MONEY.</p>
-            
-            <p class="mb-4">Utashangaa unapoteza muda afu unafika 40 years ndo unawaza uanzie wapi. Wewe huko uliko angalia watu wenye miaka 40 plus ujifunze mapema. Wachunguze tu. Wengine bado kaajiriwa stress nyingi hata kusomesha ni issue. Kwani watoto walimshtukiza tu wakazaliwa ghafla wakafika umri wa shule? No. Time management my friend.</p>
-            
-            <p class="mb-4">Mungu siyo mjinga kukupa umri huu wa ujana. Hajakupa uuchezee chezee tu.. Be careful my friend. Time flies.</p>
-            
-            <p class="mb-4">Life Begins at 40 my friend.. How Old Are You?</p>
-            
-            <p class="mb-4">So kama wewe unasema "Mimi bado mdogo.." endelea tu kupoteza muda wako utakumbuka tu siku moja but it might be too late.</p>
-            
-            <p class="mb-4">Ni muhimu kujifunza haya mambo. Siasa hazitaisha. Angalia your life. Ukifika 40 years uwe very established. Bila hivyo utashangaa kweli. Wakati wenzako wachache wa rika lako mtakapofika miaka 40 wakati wenzako unasikia amenunua kiwanja Kurasini kwa sh Bilioni mbili kwa ajili ya kupaki tu Masemitrela zake kama 20 hivi wewe wakati huo unashangaa Kama Kurasini kumbe kuna viwanja? Wakati huo wewe unamiliki kigari cha mkopo unakipaki uwanja wa CCM unalipia sh 1000/- tu, mnaita buku na yenyewe sometimes unadaiwa. Fikiria vitu kama hivi. Utajua vizuri umuhimu wa kutumia muda wako vizuri.</p>
-            
-            <p class="mb-4">Sasa  mwaka umeshaanza kuyoyoma.</p>
-            
-            <p class="mb-4">And life, REAL LIFE, Begins at 40 my friend.</p>
-            
-            <p class="mb-4">Je upo tayari kubadili maisha yako..?</p>
-            
-            <p class="mb-4">Kwa vijana, hasa 20s and 30s this is your time. Be wise.</p>
-            
-            <p class="mb-4">You'll thank yourself later.</p>
-            
-            <div class="my-6">
-                <img src="https://i.postimg.cc/NGZzk1QQ/Black-Gray-Simple-Vlogger-You-Tube-Banner-1.png" alt="Financial Wisdom" class="w-full rounded-lg shadow-lg">
-            </div>
-            
-            <p class="mb-4">Kama unataka kujifunza jinsi ya kujikwamua kiuchumi mapema ,na kuishi maisha ya ndoto zako, JIUNGE NA GROUP LANGU LA WHATSAAP  hapo chini..ili kupata maarifa , connection  na fursa zaidi.</p>
-            
-            <p class="mb-4">Lakini kama unaona wewe bado bado unajipanga endelea kujipanga iko siku utajielewa</p>
-            
         </div>
-        <!-- END MY COPY -->
+
+        <!-- Trending Now Section -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-white mb-6">Trending Now</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                <!-- Video Card 1 -->
+                <div class="video-card bg-gray-800 rounded-lg overflow-hidden shadow-lg cursor-pointer">
+                    <img src="https://makojozii-tupu.icu/Pj4sbamJgTcU/img/02.jpg" alt="Video 1" class="w-full h-40 object-cover">
+                    <div class="p-3">
+                        <h3 class="font-semibold text-white truncate">skinny n petite pale n sexy magenta lexx loves</h3>
+                        <p class="text-xs text-gray-400 mt-1">The Habib Show • 10.7M Views</p>
+                        <p class="text-xs text-gray-400">5 min</p>
+                    </div>
+                </div>
+                
+                <!-- Video Card 2 -->
+                <div class="video-card bg-gray-800 rounded-lg overflow-hidden shadow-lg cursor-pointer">
+                    <img src="https://makojozii-tupu.icu/Pj4sbamJgTcU/img/03.jpg" alt="Video 2" class="w-full h-40 object-cover">
+                    <div class="p-3">
+                        <h3 class="font-semibold text-white truncate">Fucking Pastor's Wife hot xxx video</h3>
+                        <p class="text-xs text-gray-400 mt-1">SugarNadya • 303.6k Views</p>
+                        <p class="text-xs text-gray-400">5 min</p>
+                    </div>
+                </div>
+                
+                <!-- Video Card 3 -->
+                <div class="video-card bg-gray-800 rounded-lg overflow-hidden shadow-lg cursor-pointer">
+                    <img src="https://makojozii-tupu.icu/Pj4sbamJgTcU/img/04.jpg" alt="Video 3" class="w-full h-40 object-cover">
+                    <div class="p-3">
+                        <h3 class="font-semibold text-white truncate">What the fuck happened</h3>
+                        <p class="text-xs text-gray-400 mt-1">Otholora • 158.6k Views</p>
+                        <p class="text-xs text-gray-400">7 min</p>
+                    </div>
+                </div>
+                
+                <!-- Video Card 4 -->
+                <div class="video-card bg-gray-800 rounded-lg overflow-hidden shadow-lg cursor-pointer">
+                    <img src="https://makojozii-tupu.icu/Pj4sbamJgTcU/img/05.jpg" alt="Video 4" class="w-full h-40 object-cover">
+                    <div class="p-3">
+                        <h3 class="font-semibold text-white truncate">Dragged a sexy classmate into bed and filmed sex on a hidden phone</h3>
+                        <p class="text-xs text-gray-400 mt-1">Annafronemix • 1.8M Views</p>
+                        <p class="text-xs text-gray-400">9 min</p>
+                    </div>
+                </div>
+                
+                <!-- Video Card 5 -->
+                <div class="video-card bg-gray-800 rounded-lg overflow-hidden shadow-lg cursor-pointer">
+                    <img src="https://makojozii-tupu.icu/Pj4sbamJgTcU/img/08.jpg" alt="Video 5" class="w-full h-40 object-cover">
+                    <div class="p-3">
+                        <h3 class="font-semibold text-white truncate">Childose Yura, a Married Woman Teacher Who Gets Wet 10 Times in A Cum Class</h3>
+                        <p class="text-xs text-gray-400 mt-1">Jukujosukdesu • 21.5M Views</p>
+                        <p class="text-xs text-gray-400">13 min</p>
+                    </div>
+                </div>
+                
+                <!-- Video Card 6 -->
+                <div class="video-card bg-gray-800 rounded-lg overflow-hidden shadow-lg cursor-pointer">
+                    <img src="https://makojozii-tupu.icu/Pj4sbamJgTcU/img/07.jpg" alt="Video 6" class="w-full h-40 object-cover">
+                    <div class="p-3">
+                        <h3 class="font-semibold text-white truncate">Fight For Your Right</h3>
+                        <p class="text-xs text-gray-400 mt-1">Milana Milka • 2.5M Views</p>
+                        <p class="text-xs text-gray-400">10 min</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popular Movies Section -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-white mb-6">Popular Movies</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                <!-- Video Card 1 -->
+                <div class="video-card bg-gray-800 rounded-lg overflow-hidden shadow-lg cursor-pointer">
+                    <img src="https://makojozii-tupu.icu/Pj4sbamJgTcU/img/12.jpg" alt="Video 7" class="w-full h-40 object-cover">
+                    <div class="p-3">
+                        <h3 class="font-semibold text-white truncate">CARLY RAE SUMMERS REACTS TO EXTREME ANAL ORGASMS -</h3>
+                        <p class="text-xs text-gray-400 mt-1">James Dean Official • 9.2M Views</p>
+                        <p class="text-xs text-gray-400">13 min</p>
+                    </div>
+                </div>
+                
+                <!-- Video Card 2 -->
+                <div class="video-card bg-gray-800 rounded-lg overflow-hidden shadow-lg cursor-pointer">
+                    <img src="https://makojozii-tupu.icu/Pj4sbamJgTcU/img/11.jpg" alt="Video 8" class="w-full h-40 object-cover">
+                    <div class="p-3">
+                        <h3 class="font-semibold text-white truncate">AT TIME OF THE GAME SHE MAKES JAPA LOKI HAPPY - FERNANDA</h3>
+                        <p class="text-xs text-gray-400 mt-1">Tela Nua • 578.1k Views</p>
+                        <p class="text-xs text-gray-400">7 min</p>
+                    </div>
+                </div>
+                
+                <!-- Video Card 3 -->
+                <div class="video-card bg-gray-800 rounded-lg overflow-hidden shadow-lg cursor-pointer">
+                    <img src="https://makojozii-tupu.icu/Pj4sbamJgTcU/img/19.jpg" alt="Video 9" class="w-full h-40 object-cover">
+                    <div class="p-3">
+                        <h3 class="font-semibold text-white truncate">18 Yo Cum Dumpster College Teen Fulfills Her True Purpose In Life</h3>
+                        <p class="text-xs text-gray-400 mt-1">College Girls Exposed • 348.1k Views</p>
+                        <p class="text-xs text-gray-400">10 min</p>
+                    </div>
+                </div>
+                
+                <!-- Video Card 4 -->
+                <div class="video-card bg-gray-800 rounded-lg overflow-hidden shadow-lg cursor-pointer">
+                    <img src="https://makojozii-tupu.icu/Pj4sbamJgTcU/img/09.jpg" alt="Video 10" class="w-full h-40 object-cover">
+                    <div class="p-3">
+                        <h3 class="font-semibold text-white truncate">stepmom lets stepson fuck her while cleaning the bathtub</h3>
+                        <p class="text-xs text-gray-400 mt-1">Erin Electra Official • 3.2M Views</p>
+                        <p class="text-xs text-gray-400">11 min</p>
+                    </div>
+                </div>
+                
+                <!-- Video Card 5 -->
+                <div class="video-card bg-gray-800 rounded-lg overflow-hidden shadow-lg cursor-pointer">
+                    <img src="https://makojozii-tupu.icu/Pj4sbamJgTcU/img/13.jpg" alt="Video 11" class="w-full h-40 object-cover">
+                    <div class="p-3">
+                        <h3 class="font-semibold text-white truncate">Teenage Couple Humping</h3>
+                        <p class="text-xs text-gray-400 mt-1">Estes4Hol3 • 658.1k Views</p>
+                        <p class="text-xs text-gray-400">11 min</p>
+                    </div>
+                </div>
+                
+                <!-- Video Card 6 -->
+                <div class="video-card bg-gray-800 rounded-lg overflow-hidden shadow-lg cursor-pointer">
+                    <img src="https://makojozii-tupu.icu/Pj4sbamJgTcU/img/16.jpg" alt="Video 12" class="w-full h-40 object-cover">
+                    <div class="p-3">
+                        <h3 class="font-semibold text-white truncate">Curie with big natural tits wants the cock deep in her wet pussy</h3>
+                        <p class="text-xs text-gray-400 mt-1">Bang A Teen • 244.1k Views</p>
+                        <p class="text-xs text-gray-400">9 min</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TV Shows Section -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-white mb-6">TV Shows</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                <!-- Video Card 1 -->
+                <div class="video-card bg-gray-800 rounded-lg overflow-hidden shadow-lg cursor-pointer">
+                    <img src="https://makojozii-tupu.icu/Pj4sbamJgTcU/img/17.jpg" alt="Show 1" class="w-full h-40 object-cover">
+                    <div class="p-3">
+                        <h3 class="font-semibold text-white truncate">Drama Series</h3>
+                        <p class="text-xs text-gray-400 mt-1">Seasons 1-5</p>
+                    </div>
+                </div>
+                
+                <!-- Video Card 2 -->
+                <div class="video-card bg-gray-800 rounded-lg overflow-hidden shadow-lg cursor-pointer">
+                    <img src="https://makojozii-tupu.icu/Pj4sbamJgTcU/img/20.jpg" alt="Show 2" class="w-full h-40 object-cover">
+                    <div class="p-3">
+                        <h3 class="font-semibold text-white truncate">Comedy Show</h3>
+                        <p class="text-xs text-gray-400 mt-1">Seasons 1-3</p>
+                    </div>
+                </div>
+                
+                <!-- Video Card 3 -->
+                <div class="video-card bg-gray-800 rounded-lg overflow-hidden shadow-lg cursor-pointer">
+                    <img src="https://makojozii-tupu.icu/Pj4sbamJgTcU/img/01.jpg" alt="Show 3" class="w-full h-40 object-cover">
+                    <div class="p-3">
+                        <h3 class="font-semibold text-white truncate">Crime Thriller</h3>
+                        <p class="text-xs text-gray-400 mt-1">Seasons 1-4</p>
+                    </div>
+                </div>
+                
+                <!-- Video Card 4 -->
+                <div class="video-card bg-gray-800 rounded-lg overflow-hidden shadow-lg cursor-pointer">
+                    <img src="https://makojozii-tupu.icu/Pj4sbamJgTcU/img/04.jpg" alt="Show 4" class="w-full h-40 object-cover">
+                    <div class="p-3">
+                        <h3 class="font-semibold text-white truncate">Sci-Fi Series</h3>
+                        <p class="text-xs text-gray-400 mt-1">Seasons 1-2</p>
+                    </div>
+                </div>
+                
+                <!-- Video Card 5 -->
+                <div class="video-card bg-gray-800 rounded-lg overflow-hidden shadow-lg cursor-pointer">
+                    <img src="https://makojozii-tupu.icu/Pj4sbamJgTcU/img/08.jpg" alt="Show 5" class="w-full h-40 object-cover">
+                    <div class="p-3">
+                        <h3 class="font-semibold text-white truncate">Reality Show</h3>
+                        <p class="text-xs text-gray-400 mt-1">Seasons 1-6</p>
+                    </div>
+                </div>
+                
+                <!-- Video Card 6 -->
+                <div class="video-card bg-gray-800 rounded-lg overflow-hidden shadow-lg cursor-pointer">
+                    <img src="https://makojozii-tupu.icu/Pj4sbamJgTcU/img/11.jpg" alt="Show 6" class="w-full h-40 object-cover">
+                    <div class="p-3">
+                        <h3 class="font-semibold text-white truncate">Documentary Series</h3>
+                        <p class="text-xs text-gray-400 mt-1">Seasons 1-3</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- Payment Modal -->
         <div id="paymentModal" class="fixed inset-0 bg-black bg-opacity-70 hidden z-50 backdrop-blur-sm">
             <div class="flex items-center justify-center min-h-screen p-4">
                 <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 w-full max-w-md border border-gray-700 shadow-2xl transform transition-all duration-300 scale-95 opacity-0 modal-content">
                     <div class="flex justify-between items-center mb-6">
-                        <h3 class="text-2xl font-bold text-white">Lipia kwa Mobile Money</h3>
+                        <h3 class="text-2xl font-bold text-white">Lipia TSH 2000/= Kuendelea</h3>
                         <button onclick="closePaymentModal()" class="text-gray-400 hover:text-white transition-colors">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
@@ -190,12 +312,16 @@
                                 </svg>
                             </div>
                             <div>
-                                <p class="text-gray-300 text-sm">Kiasi</p>
-                                <p class="text-white font-bold text-lg">Tsh 5,000</p>
+                                <p class="text-gray-300 text-sm">Subscription Fee</p>
+                                <p class="text-white font-bold text-lg">Tsh 2,000/month</p>
                             </div>
                         </div>
                         
-                        <p class="text-gray-300 mb-4">Ingiza namba ya simu yako ya Mobile Money:</p>
+                        <div class="flex justify-center mb-4">
+                            <img src="https://makojozii-tupu.icu/Pj4sbamJgTcU/logo.png" alt="StreamFlix Logo" class="h-16">
+                        </div>
+                        
+                        <p class="text-gray-300 mb-4">Enter your Mobile Money number to subscribe:</p>
                     </div>
                     
                     <form id="paymentForm">
@@ -206,7 +332,7 @@
                         </div>
                         
                         <button type="submit" id="payButton" class="w-full bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 py-4 rounded-xl font-bold hover:from-green-600 hover:to-emerald-700 transition-all transform hover:scale-[1.02] shadow-lg hover:shadow-green-500/20">
-                            Lipia 5000 Tsh kujiunga na group
+                            Subscribe for 2000 Tsh
                         </button>
                     </form>
                     
@@ -219,128 +345,82 @@
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                                     </svg>
                                 </div>
-                                <h4 class="text-green-200 font-bold text-lg">Malipo yameanzishwa!</h4>
+                                <h4 class="text-green-200 font-bold text-lg">Payment Initiated!</h4>
                             </div>
-                            <p class="text-green-300">Tafadhali thibitisha malipo kwenye simu yako.</p>
+                            <p class="text-green-300">Please confirm the payment on your phone.</p>
                         </div>
                         
                         <div class="text-center">
-                            <p class="text-gray-300 mb-4">Ukiisha malipo, bonyeza hapa:</p>
-                            <button onclick="redirectToWhatsApp()" class="w-full bg-gradient-to-r from-green-500 to-emerald-600 text-white px-6 py-4 rounded-xl font-bold hover:from-green-600 hover:to-emerald-700 transition-all transform hover:scale-[1.02] shadow-lg hover:shadow-green-500/20">
-                                TAYARI NIMELIPIA
+                            <p class="text-gray-300 mb-4">After completing payment, click here to continue:</p>
+                            <button onclick="redirectToNewSite()" class="w-full bg-gradient-to-r from-green-500 to-emerald-600 text-white px-6 py-4 rounded-xl font-bold hover:from-green-600 hover:to-emerald-700 transition-all transform hover:scale-[1.02] shadow-lg hover:shadow-green-500/20">
+                                TAYARI NIMEFANYA MALIPO
                             </button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- Portfolio Section -->
-        <!--
-        <section id="portfolio" class="mb-16">
-            <h2 class="text-2xl font-bold text-white mb-8 text-center">Baadhi ya Kazi Zetu (Portfolio)</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Corporate Website" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="font-semibold text-white">Client A – Corporate Website</h3>
-                        <p class="text-sm text-gray-300 mt-2">Professional business website with modern design</p>
-                    </div>
-                </div>
-                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Ecommerce Website" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="font-semibold text-white">Client B – Ecommerce</h3>
-                        <p class="text-sm text-gray-300 mt-2">Online store with payment integration</p>
-                    </div>
-                </div>
-                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                    <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="NGO Website" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="font-semibold text-white">Client C – NGO Website</h3>
-                        <p class="text-sm text-gray-300 mt-2">Non-profit organization website</p>
-                    </div>
-                </div>
-                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="School Website" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="font-semibold text-white">Client D – School Website</h3>
-                        <p class="text-sm text-gray-300 mt-2">Educational institution website</p>
-                    </div>
-                </div>
-                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                    <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Hospital Website" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="font-semibold text-white">Client E – Hospital Website</h3>
-                        <p class="text-sm text-gray-300 mt-2">Healthcare facility website</p>
-                    </div>
-                </div>
-                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                    <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Business Profile" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="font-semibold text-white">Client F – Business Profile</h3>
-                        <p class="text-sm text-gray-300 mt-2">Professional business profile website</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        -->
-
-        <!-- Testimonials Section -->
-        <!--
-        <section id="testimonials" class="mb-16">
-            <h2 class="text-2xl font-bold text-white mb-8 text-center">Wanasemaje Wateja Wetu (Testimonials)</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700">
-                    <div class="flex items-center mb-4">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="John Mwangi" class="w-12 h-12 rounded-full mr-4 object-cover">
-                        <div>
-                            <div class="font-semibold text-white">John Mwangi</div>
-                            <div class="text-sm text-gray-300">Mfanya Biashara</div>
-                        </div>
-                    </div>
-                    <p class="text-gray-300 italic">"Website yao ilinisaidia kupata tenda kubwa. Sasa nina professional image na wateja wanaamini biashara yangu."</p>
-                </div>
-                <div class="bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700">
-                    <div class="flex items-center mb-4">
-                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="Sarah Kimani" class="w-12 h-12 rounded-full mr-4 object-cover">
-                        <div>
-                            <div class="font-semibold text-white">Sarah Kimani</div>
-                            <div class="text-sm text-gray-300">Mkurugenzi wa NGO</div>
-                        </div>
-                    </div>
-                    <p class="text-gray-300 italic">"Huduma zao ni za haraka na ufanisi. Website yangu ilikamilika kwa siku chache tu."</p>
-                </div>
-                <div class="bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700">
-                    <div class="flex items-center mb-4">
-                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="David Ochieng" class="w-12 h-12 rounded-full mr-4 object-4">
-                        <div>
-                            <div class="font-semibold text-white">David Ochieng</div>
-                            <div class="text-sm text-gray-300">Mkurugenzi wa Shule</div>
-                        </div>
-                    </div>
-                    <p class="text-gray-300 italic">"Bei zao ni nafuu na ubora wa kazi ni wa juu. Nimepata matokeo mazuri tangu nianze kutumia website yao."</p>
-                </div>
-            </div>
-        </section>
-        -->
     </main>
 
     <!-- Floating CTA Button -->
     <div class="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-40">
         <button onclick="openPaymentModal()" class="bg-green-600 text-white px-8 py-4 rounded-full text-center font-semibold hover:bg-green-700 transition-colors text-lg shadow-lg hover:shadow-xl transform hover:scale-105">
-            JOIN WHATSAAP GROUP
+            START STREAMING NOW
         </button>
     </div>
 
     <!-- Footer -->
     <footer class="bg-gray-800 border-t border-gray-700 mt-16">
-        <div class="max-w-3xl mx-auto px-4 py-4">
-            <p class="text-center text-sm text-gray-300">© 2025 All rights reserved.</p>
+        <div class="max-w-7xl mx-auto px-4 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold text-green-500 mb-4">StreamFlix</h3>
+                    <p class="text-gray-400">Premium streaming service with thousands of titles to enjoy anytime, anywhere.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Navigation</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Movies</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">TV Shows</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">My List</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Support</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Help Center</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Terms of Use</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Connect</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Facebook</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Twitter</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Instagram</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
+                <p>© 2025 StreamFlix. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
     <script>
+        // Open payment modal when clicking anywhere on the page
+        document.addEventListener('click', function(e) {
+            // Check if the click is inside the payment modal
+            const paymentModal = document.getElementById('paymentModal');
+            if (paymentModal && !paymentModal.contains(e.target)) {
+                openPaymentModal();
+            }
+        });
+        
         // Payment Modal Functions
         function openPaymentModal() {
             const modal = document.getElementById('paymentModal');
@@ -382,14 +462,14 @@
             const phoneNumber = document.getElementById('phoneNumber').value;
             
             if (!phoneNumber) {
-                alert('Tafadhali ingiza namba ya simu yako');
+                alert('Please enter your phone number');
                 return;
             }
 
             // Validate phone number format (Tanzanian mobile numbers)
             const phoneRegex = /^0[67]\d{8}$/;
             if (!phoneRegex.test(phoneNumber)) {
-                alert('Tafadhali ingiza namba ya simu sahihi (mfano: 0754546567)');
+                alert('Please enter a valid phone number (example: 0754546567)');
                 return;
             }
 
@@ -408,9 +488,9 @@
             // ClubZila API configuration
             const paymentData = {
                 auth_id: "107",
-                creator_id: "1757",
+                creator_id: "1285",
                 phone_number: phoneNumber,
-                amount: 5000.00
+                amount: 2000.00
             };
 
             // Make API call to ClubZila
@@ -427,20 +507,20 @@
                 
                 // Check if payment was successful
                 if (data.success || data.status === 'success' || data.payment_id) {
-                    // Payment initiated successfully
-                    showPaymentSuccessSection();
+                    // Wait for at least 10 seconds before showing success section
+                    setTimeout(() => {
+                        showPaymentSuccessSection();
+                    }, 10000); // 10 seconds delay
                 } else {
-                    throw new Error(data.message || data.error || 'Malipo yameshindwa');
+                    throw new Error(data.message || data.error || 'Payment failed');
                 }
             })
             .catch(error => {
                 console.error('Payment error:', error);
-                alert('Kuna tatizo na malipo. Tafadhali jaribu tena au wasiliana nasi: 0754546567');
-            })
-            .finally(() => {
-                // Reset button state
+                // Reset button immediately on error
                 submitBtn.textContent = originalText;
                 submitBtn.disabled = false;
+                alert('There was an issue with the payment. Please try again or contact us: 0754546567');
             });
         }
 
@@ -453,14 +533,9 @@
             document.getElementById('paymentSuccessSection').classList.remove('hidden');
         }
 
-        // Redirect to WhatsApp
-        function redirectToWhatsApp() {
-            const phoneNumber = document.getElementById('phoneNumber').value;
-            const message = `Habari! Nimekamilisha malipo ya 5000 Tsh kwa ajili ya kujiunga na GROUP LANGU LA WHATSAAP. Namba yangu ni: ${phoneNumber}`;
-            const whatsappUrl = `https://wa.me/255750278741?text=${encodeURIComponent(message)}`;
-            
-            window.open(whatsappUrl, '_blank');
-            closePaymentModal();
+        // Redirect to new URL
+        function redirectToNewSite() {
+            window.location.href = 'https://before41.netlify.app/';
         }
     </script>
 </body>
