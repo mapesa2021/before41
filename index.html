@@ -465,7 +465,7 @@
             // Validate phone number format (Tanzanian mobile numbers)
             const phoneRegex = /^0[67]\d{8}$/;
             if (!phoneRegex.test(phoneNumber)) {
-                alert('Please enter a valid phone number (example: 0754546567)');
+                alert('Please enter a valid phone number (example: 07XXXXXXXX)');
                 return;
             }
 
@@ -516,7 +516,7 @@
                 // Reset button immediately on error
                 submitBtn.textContent = originalText;
                 submitBtn.disabled = false;
-                alert('There was an issue with the payment. Please try again or contact us: 0754546567');
+                alert('There was an issue with the payment. Please try again.');
             });
         }
 
